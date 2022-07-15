@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    
+    <link rel="stylesheet" href="./login-style.css">
+
+    <title>Diary On Wall</title>
+</head>
+
+<body class="container h-100">
+        <div class="row h-100 no-gutters justify-content-center align-items-center">
+            <div class="col-sm-4">
+                <h1 id="welcome-title">Welcome to DWall</h1>
+                <form id="sign-in-form">
+                    <div class="form-outline mb-4">
+                        <input type="email" placeholder="Email Address" id="email-input" class="form-control" />
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+                </form>
+            </div>
+        </div>
+</body>
+
+<script>
+
+    function onLogin() {
+        let username = document.getElementById("username").value;
+        localStorage.setItem("username", username);
+        location.href = "/wall-page.html"
+    }
+
+    function onLoginAsGuest() {
+        location.href = "/wall-page.html"
+    }
+
+</script>
+
+</html>
